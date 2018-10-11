@@ -6,3 +6,5 @@ LIRI can now take four commands:
 2.spotify-this-song
 3.movie-this
 4.do-what-it-says
+
+Here are the screenshots to show that the liri app works: https://drive.google.com/drive/folders/1WY8F9RxJaJwLYvUbGdMO0DeyVRc4d9VA?usp=sharing

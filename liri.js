@@ -82,12 +82,16 @@ if (process.argv[2] === "do-what-it-says") {
             if (song.length === 0) {
                 song = "The Sign";
             }
-            spotify.search({ type: 'track', query: song }, function (err, data) {
+            spotify.search({ type: 'track', query: song, limit: 1 }, function (err, data) {
                 if (err) {
                     return console.log('Error occurred: ' + err);
                 }
-
-                console.log(data);
+        
+                //console.log(JSON.stringify(data, null, 2));
+                console.log("\nThe artist is: "+ data.tracks.items[0].album.artists[0].name);
+                console.log("\nThe song's name is: " + song);
+                console.log("\nA preview link: " + data.tracks.items[0].album.external_urls.spotify);
+                console.log("\nName of the album is:" + data.tracks.items[0].album.name);
             });
         }
 
